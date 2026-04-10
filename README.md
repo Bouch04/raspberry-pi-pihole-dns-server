@@ -68,10 +68,17 @@ All network identifiers and IP addresses have been sanitized for security.
 
 ---
 
+## Screenshots
+
+### Pi-hole Dashboard Overview
+The dashboard displays real-time DNS statistics, including total queries, blocked queries, and client activity across the network.
+
+![Dashboard](images/dashboard-overview.jpg)
+
+---
+
 ## Deployment Process
 
 ### System Update
 ```bash
 sudo apt update && sudo apt upgrade -y
-
-
