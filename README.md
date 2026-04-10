@@ -1,9 +1,11 @@
 # Raspberry Pi Pi-hole DNS Server
 
 ## Overview
-This project documents the deployment and configuration of a Raspberry Pi–based Pi-hole DNS server used as the primary DNS resolver for a private LAN.
+This project demonstrates the deployment and configuration of a Raspberry Pi–based Pi-hole DNS server used as the primary DNS resolver for a private LAN.
 
-The system provides network-wide ad blocking, DNS filtering, and improved privacy by controlling outbound DNS queries.
+This system provides network-wide ad blocking, DNS filtering, and improved privacy by controlling outbound DNS queries.
+
+The deployment improves network privacy, reduces unwanted traffic, and centralizes DNS control across multiple LAN clients.
 
 All network identifiers and IP addresses have been sanitized for security.
 
@@ -38,9 +40,9 @@ All network identifiers and IP addresses have been sanitized for security.
 
 ## Pi-hole Configuration
 
-- Pi-hole Core Version: v6.x  
-- Web Interface Version: v6.x  
-- FTL Engine Version: v6.x  
+- Pi-hole Core Version: v6.4  
+- Web Interface Version: v6.5  
+- FTL Engine Version: v6.6  
 
 ### Service Status
 - DNS service active on port 53  
@@ -63,8 +65,8 @@ All network identifiers and IP addresses have been sanitized for security.
 
 ## Storage
 
-- Operating System hosted on SD card  
-- Additional storage provided via NVMe SSD  
+- Operating System hosted on NVMe SSD  
+- SD card retained for auxiliary storage and backup use  
 
 ---
 
@@ -89,8 +91,38 @@ The query log demonstrates real-time DNS requests from multiple LAN clients. Thi
 
 ![Query Log](images/query-log-activity.png)
 
+---
 
+## System Validation
 
+### Pi-hole Service Status
+The Pi-hole DNS service was verified to be active and handling DNS requests on port 53. Ad-blocking functionality is enabled and operational.
+
+- DNS service running
+- Blocking enabled
+- FTL engine active
+
+---
+
+### Storage Verification
+The system was confirmed to be running from NVMe storage rather than the default SD card.
+
+- Root filesystem mounted on NVMe (`/dev/nvme0n1p2`)
+- Filesystem type: ext4
+- Mount options optimized for performance (`noatime`)
+
+---
+
+### Verification Commands
+
+```bash
+pihole status
+lsblk
+findmnt /
+
+```
+
+---
 
 
 
