@@ -1,9 +1,9 @@
 # Raspberry Pi Pi-hole DNS Server
 
 ## Overview
-This project demonstrates the deployment and configuration of a Raspberry Pi–based Pi-hole DNS server used as the primary DNS resolver for a private LAN.
+This project demonstrates the deployment, configuration, and validation of a Raspberry Pi–based Pi-hole DNS server used as the primary DNS resolver for a private LAN.
 
-This system provides network-wide ad blocking, DNS filtering, and improved privacy by controlling outbound DNS queries.
+The system provides network-wide ad blocking, DNS filtering, and improved privacy by controlling outbound DNS queries.
 
 The deployment improves network privacy, reduces unwanted traffic, and centralizes DNS control across multiple LAN clients.
 
@@ -93,10 +93,10 @@ The query log demonstrates real-time DNS requests from multiple LAN clients. Thi
 
 ---
 
-## System Validation
+## System Validation and Verification
 
 ### Pi-hole Service Status
-The Pi-hole DNS service was verified to be active and handling DNS requests on port 53. Ad-blocking functionality is enabled and operational.
+The Pi-hole DNS service was verified to be active and handling DNS requests on port 53 across multiple LAN clients.
 
 - DNS service running
 - Blocking enabled
@@ -120,5 +120,16 @@ pihole status
 lsblk
 findmnt /
 ```
+
+---
+
+## Key Outcomes
+
+- Successfully deployed a centralized DNS filtering solution for a private LAN
+- Reduced unwanted network traffic through DNS-based ad blocking
+- Implemented static IP configuration with router-managed DHCP
+- Optimized system performance by migrating the OS to NVMe storage
+- Validated system functionality through command-line and interface-based monitoring
+
 
 
