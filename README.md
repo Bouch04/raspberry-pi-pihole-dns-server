@@ -84,7 +84,10 @@ The dashboard displays real-time DNS statistics, including total queries, blocke
 
 ![Dashboard](images/dashboard-overview.jpg)
 
----
+### DNS Query Activity
+The query log demonstrates real-time DNS requests from multiple LAN clients. This confirms that the Pi-hole instance is actively handling and filtering network traffic.
+
+![Query Log](images/query-log-activity.png)
 
 
 
