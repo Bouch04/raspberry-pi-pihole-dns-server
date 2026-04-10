@@ -119,11 +119,6 @@ The system was confirmed to be running from NVMe storage rather than the default
 pihole status
 lsblk
 findmnt /
-
 ```
-
----
-
-
 
 
