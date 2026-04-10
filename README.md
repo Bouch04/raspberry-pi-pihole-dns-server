@@ -1,11 +1,11 @@
 # Raspberry Pi Pi-hole DNS Server
 
 ## Overview
-This project demonstrates the deployment, configuration, and validation of a Raspberry Pi–based Pi-hole DNS server used as the primary DNS resolver for a private LAN.
+I deployed, configured, and validated a Raspberry Pi–based Pi-hole DNS server to function as the primary DNS resolver for a private LAN.
 
 The system provides network-wide ad blocking, DNS filtering, and improved privacy by controlling outbound DNS queries.
 
-The deployment improves network privacy, reduces unwanted traffic, and centralizes DNS control across multiple LAN clients.
+This deployment improves network privacy, reduces unwanted traffic, and centralizes DNS control across multiple LAN clients.
 
 All network identifiers and IP addresses have been sanitized for security.
 
@@ -87,7 +87,7 @@ The dashboard displays real-time DNS statistics, including total queries, blocke
 ![Dashboard](images/dashboard-overview.jpg)
 
 ### DNS Query Activity
-The query log demonstrates real-time DNS requests from multiple LAN clients. This confirms that the Pi-hole instance is actively handling and filtering network traffic.
+The query log demonstrates real-time DNS requests from multiple LAN clients, confirming that the Pi-hole instance is actively handling and filtering network traffic.
 
 ![Query Log](images/query-log-activity.png)
 
@@ -96,7 +96,7 @@ The query log demonstrates real-time DNS requests from multiple LAN clients. Thi
 ## System Validation and Verification
 
 ### Pi-hole Service Status
-The Pi-hole DNS service was verified to be active and handling DNS requests on port 53 across multiple LAN clients.
+I verified that the Pi-hole DNS service is active and handling DNS requests on port 53 across multiple LAN clients.
 
 - DNS service running
 - Blocking enabled
@@ -105,7 +105,7 @@ The Pi-hole DNS service was verified to be active and handling DNS requests on p
 ---
 
 ### Storage Verification
-The system was confirmed to be running from NVMe storage rather than the default SD card.
+I confirmed that the system is running from NVMe storage rather than the default SD card.
 
 - Root filesystem mounted on NVMe (`/dev/nvme0n1p2`)
 - Filesystem type: ext4
