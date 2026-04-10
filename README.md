@@ -68,6 +68,15 @@ All network identifiers and IP addresses have been sanitized for security.
 
 ---
 
+## Deployment Process
+
+### System Update
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+---
+
 ## Screenshots
 
 ### Pi-hole Dashboard Overview
@@ -77,8 +86,9 @@ The dashboard displays real-time DNS statistics, including total queries, blocke
 
 ---
 
-## Deployment Process
 
-### System Update
-```bash
-sudo apt update && sudo apt upgrade -y
+
+
+
+
+
