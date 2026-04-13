@@ -32,9 +32,16 @@ All network identifiers and IP addresses have been sanitized for security.
 ## Network Configuration
 
 - Interface: eth0 (Ethernet)  
-- IP Assignment: Static (DHCP reservation via router)  
-- DNS Role: Primary resolver for LAN clients  
-- Fallback DNS: Router (sanitized)  
+- IP Assignment: DHCP reservation via router (ensures consistent IP without manual static configuration)  
+- DNS Role: Primary resolver for LAN clients
+- Fallback DNS: Router (sanitized)
+
+### Client-Based DNS Filtering (Device Segmentation)
+Configured Pi-hole client groups to apply device-specific DNS filtering policies.
+
+- Isolated streaming devices (Roku) into a dedicated client group  
+- Applied stricter blocklists to reduce ads on streaming platforms  
+- Maintained separate filtering policies for general LAN clients to prevent service disruption 
 
 ---
 
@@ -93,6 +100,14 @@ The query log demonstrates real-time DNS requests from multiple LAN clients, con
 
 ---
 
+## Troubleshooting and Optimization
+
+- Diagnosed DNS resolution issues and applied temporary resolver fixes when needed  
+- Monitored live DNS traffic using `pihole -t` to verify filtering behavior  
+- Adjusted blocklists and implemented selective whitelisting to prevent application breakage 
+
+---
+
 ## System Validation and Verification
 
 ### Pi-hole Service Status
@@ -102,16 +117,12 @@ I verified that the Pi-hole DNS service is active and handling DNS requests on p
 - Blocking enabled
 - FTL engine active
 
----
-
 ### Storage Verification
 I confirmed that the system is running from NVMe storage rather than the default SD card.
 
 - Root filesystem mounted on NVMe (`/dev/nvme0n1p2`)
 - Filesystem type: ext4
 - Mount options optimized for performance (`noatime`)
-
----
 
 ### Verification Commands
 
@@ -125,11 +136,11 @@ findmnt /
 
 ## Key Outcomes
 
-- Successfully deployed a centralized DNS filtering solution for a private LAN
-- Reduced unwanted network traffic through DNS-based ad blocking
-- Implemented static IP configuration with router-managed DHCP
-- Optimized system performance by migrating the OS to NVMe storage
-- Validated system functionality through command-line and interface-based monitoring
+- Deployed a centralized DNS filtering solution for a multi-device LAN environment  
+- Reduced unwanted network traffic and improved privacy through DNS-based filtering  
+- Implemented DHCP reservations to ensure consistent network addressing for critical devices  
+- Applied device-specific filtering policies to balance security and usability  
+- Improved system performance and reliability by migrating the OS to NVMe storage
 
 
 
