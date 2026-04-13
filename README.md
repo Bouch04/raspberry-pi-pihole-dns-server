@@ -32,9 +32,9 @@ This project simulates real-world network administration tasks, including DNS ma
 
 ## Network Configuration
 
-- Interface: eth0 (Ethernet)  
-- IP Assignment: DHCP reservation via router (ensures consistent IP without manual static configuration)  
-- DNS Role: Primary resolver for LAN clients
+- Interface: eth0 (Ethernet)
+- IP Assignment: DHCP reservation via router (ensures consistent IP without manual static configuration)
+- DNS Role: Primary resolver for LAN clients  
 - Fallback DNS: Router (sanitized)
 
 ---
@@ -42,11 +42,11 @@ This project simulates real-world network administration tasks, including DNS ma
 ## Advanced Configuration
 
 ### Client-Based DNS Filtering (Device Segmentation)
-Configured Pi-hole client groups to apply device-specific DNS filtering policies.
+Designed and implemented client-based DNS filtering using Pi-hole groups to enforce device-specific network policies.
 
-- Isolated streaming devices (Roku) into a dedicated client group  
-- Applied stricter blocklists to reduce ads on streaming platforms  
-- Maintained separate filtering policies for general LAN clients to prevent service disruption 
+- Isolated streaming devices (Roku) into a dedicated client group
+- Applied stricter blocklists to reduce ads on streaming platforms
+- Maintained separate filtering policies for general LAN clients to prevent service disruption
 
 ---
 
@@ -110,6 +110,7 @@ The query log demonstrates real-time DNS requests from multiple LAN clients, con
 - Diagnosed DNS resolution issues and applied temporary resolver fixes when needed  
 - Monitored live DNS traffic using `pihole -t` to verify filtering behavior  
 - Adjusted blocklists and implemented selective whitelisting to prevent application breakage 
+- Verified DNS service health and status using `pihole status`
 
 ---
 
