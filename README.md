@@ -1,4 +1,4 @@
-# Raspberry Pi Pi-hole DNS Server
+# Raspberry Pi DNS Filtering Server (Pi-hole Deployment)
 
 ## Overview
 Deployed, configured, and validated a Raspberry Pi–based Pi-hole server as the primary DNS resolver for a private LAN.
