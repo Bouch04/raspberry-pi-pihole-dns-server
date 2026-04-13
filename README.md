@@ -36,6 +36,10 @@ All network identifiers and IP addresses have been sanitized for security.
 - DNS Role: Primary resolver for LAN clients
 - Fallback DNS: Router (sanitized)
 
+---
+
+## Advanced Configuration
+
 ### Client-Based DNS Filtering (Device Segmentation)
 Configured Pi-hole client groups to apply device-specific DNS filtering policies.
 
