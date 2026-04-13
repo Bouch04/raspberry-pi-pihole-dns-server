@@ -1,11 +1,11 @@
 # Raspberry Pi DNS Filtering Server (Pi-hole Deployment)
 
 ## Overview
-Deployed, configured, and validated a Raspberry Pi–based Pi-hole server as the primary DNS resolver for a private LAN.
+Deployed and configured a Raspberry Pi–based Pi-hole DNS server as the primary DNS resolver for a private LAN.
 
-The system enables network-wide DNS filtering and ad blocking, improving privacy, reducing unwanted traffic, and centralizing DNS control across multiple devices.
+Implemented network-wide DNS filtering and ad blocking to improve privacy, reduce unnecessary traffic, and centralize DNS management across multiple client devices.
 
-This project demonstrates real-world network administration tasks, including DNS management, DHCP integration, policy-based filtering, and troubleshooting in a controlled environment.
+Demonstrates hands-on experience with network services, DNS administration, client segmentation, and system troubleshooting in a controlled environment.
 
 All network identifiers and IP addresses have been sanitized for security.
 
@@ -64,7 +64,7 @@ Designed and implemented client-based DNS filtering using Pi-hole groups to enfo
 
 ## Firewall Configuration
 
-- Firewall: UFW (Uncomplicated Firewall)  
+Firewall: UFW (Uncomplicated Firewall)  
 - Allowed Ports:
   - 53 (DNS)
   - 80 (HTTP)
@@ -76,8 +76,8 @@ Designed and implemented client-based DNS filtering using Pi-hole groups to enfo
 
 ## Storage
 
-- Operating System hosted on NVMe SSD  
-- SD card retained for auxiliary storage and backup use  
+- Operating system deployed on NVMe SSD for improved performance
+- SD card retained for backup and auxiliary storage 
 
 ---
 
@@ -93,12 +93,12 @@ sudo apt update && sudo apt upgrade -y
 ## Screenshots
 
 ### Pi-hole Dashboard Overview
-The dashboard displays real-time DNS statistics, including total queries, blocked queries, and client activity across the network.
+Displays real-time DNS statistics including total queries, blocked queries, and client activity.
 
 ![Dashboard](images/dashboard-overview.jpg)
 
 ### DNS Query Activity
-The query log demonstrates real-time DNS requests from multiple LAN clients, confirming that the Pi-hole instance is actively handling and filtering network traffic.
+Demonstrates active DNS request handling and filtering across multiple LAN clients.
 
 ![Query Log](images/query-log-activity.png)
 
@@ -106,28 +106,25 @@ The query log demonstrates real-time DNS requests from multiple LAN clients, con
 
 ## Troubleshooting and Optimization
 
-- Diagnosed DNS resolution issues and applied temporary resolver fixes when needed  
-- Monitored live DNS traffic using `pihole -t` to verify filtering behavior  
-- Adjusted blocklists and implemented selective whitelisting to prevent application breakage 
-- Verified DNS service health and status using `pihole status`
+- Diagnosed and resolved DNS resolution issues through iterative testing
+- Monitored live DNS traffic using pihole -t
+- Tuned blocklists and implemented selective whitelisting to maintain service functionality
+- Verified service health using pihole status
 
 ---
 
 ## System Validation and Verification
 
-### Pi-hole Service Status
-I verified that the Pi-hole DNS service is active and handling DNS requests on port 53 across multiple LAN clients.
+### Service Validation
 
-- DNS service running
-- Blocking enabled
-- FTL engine active
+- Confirmed DNS service operation on port 53
+- Verified active filtering and FTL engine status
 
 ### Storage Verification
-I confirmed that the system is running from NVMe storage rather than the default SD card.
 
-- Root filesystem mounted on NVMe (`/dev/nvme0n1p2`)
+- Root filesystem mounted on NVMe (/dev/nvme0n1p2)
 - Filesystem type: ext4
-- Mount options optimized for performance (`noatime`)
+- Optimized mount options (noatime)
 
 ### Verification Commands
 
@@ -141,11 +138,11 @@ findmnt /
 
 ## Key Outcomes
 
-- Deployed a centralized DNS filtering solution for a multi-device LAN environment  
-- Reduced unwanted network traffic and improved privacy through DNS-based filtering  
-- Implemented DHCP reservations to ensure consistent network addressing for critical devices  
-- Applied device-specific filtering policies to balance security and usability  
-- Improved system performance and reliability by migrating the OS to NVMe storage
+- Deployed a centralized DNS filtering solution for a multi-device LAN
+- Reduced unwanted DNS traffic and improved network privacy
+- Implemented device-level policy control using client segmentation
+- Increased system performance and reliability through NVMe migration
+- Demonstrated practical skills in Linux administration, networking, and troubleshooting
 
 
 
