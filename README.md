@@ -97,7 +97,8 @@ Displays real-time DNS statistics including total queries, blocked queries, and 
 
 ![Dashboard](images/dashboard-overview.jpg)
 
-### DNS Query Activity
+### Example DNS Query Activity
+Image by Den Delimarsky (https://den.dev/blog/pihole/#the-top)
 Demonstrates active DNS request handling and filtering across multiple LAN clients.
 
 ![Query Log](images/query-log-activity.png)
