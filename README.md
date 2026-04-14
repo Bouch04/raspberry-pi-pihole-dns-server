@@ -100,7 +100,7 @@ Displays real-time DNS statistics including total queries, blocked queries, and 
 ### DNS Query Activity
 Demonstrates active DNS request handling and filtering across multiple LAN clients.
 
-![Query Log](images/query-log-activity.png)
+![Query Log](images/query-log
 
 ---
 
