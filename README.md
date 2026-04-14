@@ -101,6 +101,7 @@ Displays real-time DNS statistics including total queries, blocked queries, and 
 Demonstrates active DNS request handling and filtering across multiple LAN clients.
 
 ![Query Log](images/query-log-activity.png)
+
 Image by Den Delimarsky (https://den.dev/blog/pihole/#the-top)
 
 ---
